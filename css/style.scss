@@ -1,0 +1,109 @@
+@import "compass";
+
+@import url(https://fonts.googleapis.com/css?family=Abel);
+
+//font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+//color
+$baseColor: #FCF9FF;
+$subColor: #C1DBFF;
+$keyColor: #B0AFE8;
+$fontColor: #4c4c4c;
+$fontColorSub: #694C00;
+
+/* base
+--------------------------*/
+html {font-size: 62.5%; }
+
+body {
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+.head-image {
+  background-image:
+  url("../images/background_image.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Align
+------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Font
+------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+
+/* Content
+------------------------*/
+section.content-section {
+  padding: 60px 0;
+  h1 {
+    font-size: 3.2rem;
+  }
+  #content {
+    color: $fontColorSub;
+    .content-box {
+      margin: 20px;
+    }
+    .inner-title {
+      background-color: $keyColor;
+      height: 40px;
+      padding-top: 10px;
+    }
+    .content {
+      background-color: $subColor;
+      padding-top: 10px;
+      height: 80px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}
+
+/* button-section
+-------------------------*/
+section.button-section {
+  background-color: $subColor;
+  padding: 30px 0 10px;
+  button {
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    @include border-radius(10px);
+    background-color: #25FF8F;
+    width: 80px;
+    height: 30px;
+  }
+}
+
+// desktop
+@media (min-width:769px){
+  .head-image {
+    height: 500px;
+  }
+  
+  #content {
+    @include display-flex;
+    @include flex-direction(row);
+    .content-box{
+      @include flex(1);
+    }
+  }
+}
+
+
+
